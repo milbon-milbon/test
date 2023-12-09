@@ -11,7 +11,12 @@
  */
 
 // ここに関数を定義しましょう
-
+function isEven(num){
+  if(num % 2 ===0){
+    return true;
+  }
+    return false;
+  }
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題1 ***");
@@ -38,7 +43,9 @@ test(isEven(10), true);
  */
 
 // ここに関数を定義しましょう
-
+function makeStr(arr){
+  return arr.join("");
+}
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題2 ***");
@@ -65,7 +72,11 @@ test(makeStr(["true", " ", "false"]), "true false");
  */
 
 // ここに関数を定義しましょう
-
+function pick(arr, index) {
+  return arr.map(function(subArr) {
+    return subArr[index];
+  });
+}
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題3 ***");
@@ -115,6 +126,14 @@ test(pick(testArray, 4), ["5", "five"]);
  */
 
 // ここに関数を定義しましょう
+function collectKeys(obj,value){
+  let result = [];
+  for(let i in obj)
+    if(obj[i] === value){
+      result.push(i);
+    }return result;
+  }
+
 
 
 // ここからはテストなので変更を加えないでください
@@ -169,7 +188,14 @@ test(collectKeys(testObject, 100), ["b"]);
  */
 
 // ここに関数を定義しましょう
-
+function createObject(key,value){
+  let result = {};
+  
+  for(let i = 0 ; i < key.length ; i++ ){
+    result[key[i]] = value[i];
+    
+  }return result;
+}
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題5 ***");
