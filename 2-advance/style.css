@@ -3,9 +3,9 @@
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-color: #fff;
-  border: 1px solid #808080;
+  border: 1px solid #b3afaf;
 }
